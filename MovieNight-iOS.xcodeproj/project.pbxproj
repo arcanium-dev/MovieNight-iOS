@@ -68,6 +68,7 @@
 		316AC1682A0FE49F00677FCE = {
 			isa = PBXGroup;
 			children = (
+				316AC18F2A0FE5AC00677FCE /* README.md */,
 				316AC1732A0FE49F00677FCE /* MovieNight-iOS */,
 				316AC1722A0FE49F00677FCE /* Products */,
 			);
