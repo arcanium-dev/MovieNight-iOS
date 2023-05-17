@@ -6,14 +6,29 @@
 //
 
 import UIKit
-
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        let window = UIWindow()
+        window.makeKeyAndVisible()
+        let navController = UINavigationController(rootViewController: HomeViewController())
+        navController.navigationBar.barStyle = .default
+        window.rootViewController = navController
+        
+        
+//
+//        let rootWindow = UIWindow(frame: UIScreen.main.bounds)
+//        rootWindow.makeKeyAndVisible()
+//        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        rootWindow.rootViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+//        self.window = rootWindow
         return true
     }
 
