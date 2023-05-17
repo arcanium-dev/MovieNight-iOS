@@ -1,0 +1,6 @@
+framework module Pods_MovieNight_iOS {
+  umbrella header "Pods-MovieNight-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
