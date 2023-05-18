@@ -20,16 +20,6 @@ class AuthenticationViewController: UIViewController {
         titleLabel.text = titleText
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if Auth.auth().currentUser == nil {
-            // User is not logged in, stay on the authentication screen
-        } else {
-            performSegue(withIdentifier: "authToHome", sender: self)
-        }
-    }
-    
     @IBAction func signUpTapped(_ sender: UIButton) {
     }
     @IBAction func loginTapped(_ sender: UIButton) {

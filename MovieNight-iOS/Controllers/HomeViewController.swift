@@ -29,9 +29,18 @@ class HomeViewController: UIViewController {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
+    
+            guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
+                return
+            }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let authNavController = storyboard.instantiateViewController(withIdentifier: "AuthNavController")
+            
+            sceneDelegate.window?.rootViewController = authNavController
+            sceneDelegate.window?.makeKeyAndVisible()
         } catch let error {
-            print("Failed to signout", error)
+            print("Failed to sign out", error)
         }
     }
     
