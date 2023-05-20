@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
                 // Check for errors
                 if error != nil {
                     // There was an error creating the user
-                    self.showError("Error creating user")
+                    self.showError("Error creating user: \(error?.localizedDescription ?? "error")")
                 }
                 else {
                     // User was created successfully, now store the first name and last name
@@ -58,13 +58,12 @@ class SignUpViewController: UIViewController {
                     db.collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "uid": uid]) { (error) in
                         if error != nil {
                             // Show error message
-                            self.showError("Error saving user data")
+                            self.showError("Error saving user data: \(error?.localizedDescription ?? "error")")
                         }
                     }
                     // Transition to the home screen
                     self.performSegue(withIdentifier: "SignUpToHome", sender: self)
                 }
-                
             }
         }
     }
@@ -80,12 +79,9 @@ class SignUpViewController: UIViewController {
             return "Please fill in all fields."
         }
         
-        // Check if the password is secure
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if Utilities.isPasswordValid(cleanedPassword) == false {
-            // Password isn't secure enough
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
+        // Validate Fields
+        if let errorMessage = Utilities.validateFields(email: emailTextField.text, password: passwordTextField.text, authFlag: "SignUp") {
+            return errorMessage
         }
         return nil
     }

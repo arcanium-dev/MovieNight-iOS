@@ -16,7 +16,7 @@ class AuthenticationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let titleText = "🎥 MovieNight"
+        let titleText = "auth_title".localized
         titleLabel.text = titleText
     }
     

@@ -35,17 +35,12 @@ class LoginViewController: UIViewController {
         // Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
-            return "Please fill in all fields."
+            return "auth_fields_error".localized
         }
-        
-        // Check if the password is secure
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if Utilities.isPasswordValid(cleanedPassword) == false {
-            // Password isn't secure enough
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        }
+        // Validate Fields
+        if let errorMessage = Utilities.validateFields(email: emailTextField.text, password: passwordTextField.text, authFlag: "Login") {
+               return errorMessage
+           }
         return nil
     }
     
@@ -68,7 +63,7 @@ class LoginViewController: UIViewController {
                 // Check for errors
                 if error != nil {
                     // There was an error creating the user
-                    self.showError("Error signing in user")
+                    self.showError("Error signing in user: \(error?.localizedDescription ?? "Invalid password.")")
                 }
                 else {
                     // Transition to the home screen

@@ -29,6 +29,8 @@
 		8CA3C13C47E48D50417CD809 /* Pods_MovieNight_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF23DDD84405F0BFF9AA16 /* Pods_MovieNight_iOS.framework */; };
 		E7385E612A14E0F50048599B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7385E602A14E0F50048599B /* LoginViewController.swift */; };
 		E7385E632A14E1020048599B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7385E622A14E1020048599B /* SignUpViewController.swift */; };
+		E73FB0C42A177CAC005B3EE6 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73FB0C32A177CAC005B3EE6 /* String.extension.swift */; };
+		E73FB0C62A178804005B3EE6 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = E73FB0C52A178804005B3EE6 /* Strings.strings */; };
 		E7D28CDE2A151FB9001033C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */; };
 		E7D28CE02A155D9E001033C5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D28CDF2A155D9E001033C5 /* Utilities.swift */; };
 		E7EE5E662A1582AA00608DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EE5E652A1582AA00608DE2 /* Images.xcassets */; };
@@ -61,6 +63,8 @@
 		AB892657357DFF92DE10A9E2 /* Pods-MovieNight-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieNight-iOS.release.xcconfig"; path = "Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E7385E602A14E0F50048599B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7385E622A14E1020048599B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E73FB0C32A177CAC005B3EE6 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
+		E73FB0C52A178804005B3EE6 /* Strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
 		E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7D28CDF2A155D9E001033C5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E7EE5E652A1582AA00608DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -178,10 +182,12 @@
 			isa = PBXGroup;
 			children = (
 				E7EE5E652A1582AA00608DE2 /* Images.xcassets */,
+				E73FB0C52A178804005B3EE6 /* Strings.strings */,
 				316AC1A12A0FE81300677FCE /* FirebaseManager.swift */,
 				316AC1A32A0FE81D00677FCE /* GenreSelectionHelper.swift */,
 				316AC1A52A0FE82A00677FCE /* SwipeManager.swift */,
 				E7D28CDF2A155D9E001033C5 /* Utilities.swift */,
+				E73FB0C32A177CAC005B3EE6 /* String.extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				316AC17E2A0FE4A000677FCE /* Assets.xcassets in Resources */,
 				E7D28CDE2A151FB9001033C5 /* GoogleService-Info.plist in Resources */,
 				E7EE5E662A1582AA00608DE2 /* Images.xcassets in Resources */,
+				E73FB0C62A178804005B3EE6 /* Strings.strings in Resources */,
 				316AC1902A0FE5AC00677FCE /* README.md in Resources */,
 				316AC17C2A0FE49F00677FCE /* Main.storyboard in Resources */,
 			);
@@ -340,6 +347,7 @@
 				316AC1B12A0FE9F200677FCE /* BrowseViewController.swift in Sources */,
 				316AC1752A0FE49F00677FCE /* AppDelegate.swift in Sources */,
 				316AC1772A0FE49F00677FCE /* SceneDelegate.swift in Sources */,
+				E73FB0C42A177CAC005B3EE6 /* String.extension.swift in Sources */,
 				316AC19E2A0FE7F800677FCE /* User.swift in Sources */,
 				E7385E612A14E0F50048599B /* LoginViewController.swift in Sources */,
 				316AC1A02A0FE7FF00677FCE /* Movie.swift in Sources */,

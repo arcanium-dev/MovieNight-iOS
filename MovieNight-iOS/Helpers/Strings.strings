@@ -1,0 +1,6 @@
+"auth_title" = "🎥 MovieNight";
+"auth_fields_error" = "Please fill in all fields.";
+"auth_email_error" = "Please make sure email is valid";
+"auth_password_error" = "Please make sure your password is at least 8 characters, contains a special character and a number.";
+"auth_password_not_valid_error" = "Incorrect password used.";
+
