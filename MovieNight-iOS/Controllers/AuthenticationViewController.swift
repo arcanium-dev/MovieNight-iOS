@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  MovieNight-iOS
-//
-//  Created by Muneeb Bray on 2023/05/13.
-//
-
 import UIKit
 import FirebaseAuth
 class AuthenticationViewController: UIViewController {
