@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		316AC1752A0FE49F00677FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1742A0FE49F00677FCE /* AppDelegate.swift */; };
 		316AC1772A0FE49F00677FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1762A0FE49F00677FCE /* SceneDelegate.swift */; };
-		316AC1792A0FE49F00677FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1782A0FE49F00677FCE /* ViewController.swift */; };
+		316AC1792A0FE49F00677FCE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1782A0FE49F00677FCE /* AuthenticationViewController.swift */; };
 		316AC17C2A0FE49F00677FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316AC17A2A0FE49F00677FCE /* Main.storyboard */; };
 		316AC17E2A0FE4A000677FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316AC17D2A0FE4A000677FCE /* Assets.xcassets */; };
 		316AC1812A0FE4A000677FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316AC17F2A0FE4A000677FCE /* LaunchScreen.storyboard */; };
@@ -25,15 +25,24 @@
 		316AC1AF2A0FE9DC00677FCE /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1AE2A0FE9DC00677FCE /* WatchListViewController.swift */; };
 		316AC1B12A0FE9F200677FCE /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1B02A0FE9F200677FCE /* BrowseViewController.swift */; };
 		316AC1B32A0FEA0100677FCE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1B22A0FEA0100677FCE /* OnboardingViewController.swift */; };
-		316AC1B52A0FEA1900677FCE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1B42A0FEA1900677FCE /* AuthViewController.swift */; };
 		316AC1B72A0FEA8600677FCE /* SwipeBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1B62A0FEA8600677FCE /* SwipeBrain.swift */; };
+		31F635ED2A1A83C000D40775 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F635EC2A1A83C000D40775 /* Auth.storyboard */; };
+		8CA3C13C47E48D50417CD809 /* Pods_MovieNight_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF23DDD84405F0BFF9AA16 /* Pods_MovieNight_iOS.framework */; };
+		E7385E612A14E0F50048599B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7385E602A14E0F50048599B /* LoginViewController.swift */; };
+		E7385E632A14E1020048599B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7385E622A14E1020048599B /* SignUpViewController.swift */; };
+		E73FB0C42A177CAC005B3EE6 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73FB0C32A177CAC005B3EE6 /* String.extension.swift */; };
+		E73FB0C62A178804005B3EE6 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = E73FB0C52A178804005B3EE6 /* Strings.strings */; };
+		E7D28CDE2A151FB9001033C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */; };
+		E7D28CE02A155D9E001033C5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D28CDF2A155D9E001033C5 /* Utilities.swift */; };
+		E7EE5E662A1582AA00608DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EE5E652A1582AA00608DE2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14FF23DDD84405F0BFF9AA16 /* Pods_MovieNight_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieNight_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316AC1712A0FE49F00677FCE /* MovieNight-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovieNight-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		316AC1742A0FE49F00677FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		316AC1762A0FE49F00677FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		316AC1782A0FE49F00677FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		316AC1782A0FE49F00677FCE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		316AC17B2A0FE49F00677FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		316AC17D2A0FE4A000677FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		316AC1802A0FE4A000677FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,8 +59,17 @@
 		316AC1AE2A0FE9DC00677FCE /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		316AC1B02A0FE9F200677FCE /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		316AC1B22A0FEA0100677FCE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		316AC1B42A0FEA1900677FCE /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		316AC1B62A0FEA8600677FCE /* SwipeBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBrain.swift; sourceTree = "<group>"; };
+		31F635EC2A1A83C000D40775 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		54E96FD80F4F8164426B138C /* Pods-MovieNight-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieNight-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AB892657357DFF92DE10A9E2 /* Pods-MovieNight-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieNight-iOS.release.xcconfig"; path = "Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E7385E602A14E0F50048599B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E7385E622A14E1020048599B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E73FB0C32A177CAC005B3EE6 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
+		E73FB0C52A178804005B3EE6 /* Strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7D28CDF2A155D9E001033C5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E7EE5E652A1582AA00608DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,18 +77,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA3C13C47E48D50417CD809 /* Pods_MovieNight_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00567CE954DA387A024053B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14FF23DDD84405F0BFF9AA16 /* Pods_MovieNight_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C7D298DC52EB0F9C3BB32A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54E96FD80F4F8164426B138C /* Pods-MovieNight-iOS.debug.xcconfig */,
+				AB892657357DFF92DE10A9E2 /* Pods-MovieNight-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		316AC1682A0FE49F00677FCE = {
 			isa = PBXGroup;
 			children = (
 				316AC18F2A0FE5AC00677FCE /* README.md */,
 				316AC1732A0FE49F00677FCE /* MovieNight-iOS */,
 				316AC1722A0FE49F00677FCE /* Products */,
+				0C7D298DC52EB0F9C3BB32A8 /* Pods */,
+				00567CE954DA387A024053B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,8 +133,8 @@
 				316AC18D2A0FE53100677FCE /* Tests */,
 				316AC1742A0FE49F00677FCE /* AppDelegate.swift */,
 				316AC1762A0FE49F00677FCE /* SceneDelegate.swift */,
+				E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */,
 				316AC1822A0FE4A000677FCE /* Info.plist */,
-				316AC18F2A0FE5AC00677FCE /* README.md */,
 			);
 			path = "MovieNight-iOS";
 			sourceTree = "<group>";
@@ -104,13 +142,14 @@
 		316AC1882A0FE4EF00677FCE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				316AC1782A0FE49F00677FCE /* ViewController.swift */,
-				316AC1B42A0FEA1900677FCE /* AuthViewController.swift */,
+				316AC1782A0FE49F00677FCE /* AuthenticationViewController.swift */,
 				316AC1B22A0FEA0100677FCE /* OnboardingViewController.swift */,
 				316AC1AA2A0FE9A100677FCE /* HomeViewController.swift */,
 				316AC1AC2A0FE9C900677FCE /* AccountSettingsViewController.swift */,
 				316AC1AE2A0FE9DC00677FCE /* WatchListViewController.swift */,
 				316AC1B02A0FE9F200677FCE /* BrowseViewController.swift */,
+				E7385E602A14E0F50048599B /* LoginViewController.swift */,
+				E7385E622A14E1020048599B /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,6 +169,7 @@
 			children = (
 				316AC17A2A0FE49F00677FCE /* Main.storyboard */,
 				316AC17F2A0FE4A000677FCE /* LaunchScreen.storyboard */,
+				31F635EC2A1A83C000D40775 /* Auth.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,9 +184,13 @@
 		316AC18C2A0FE52300677FCE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E7EE5E652A1582AA00608DE2 /* Images.xcassets */,
+				E73FB0C52A178804005B3EE6 /* Strings.strings */,
 				316AC1A12A0FE81300677FCE /* FirebaseManager.swift */,
 				316AC1A32A0FE81D00677FCE /* GenreSelectionHelper.swift */,
 				316AC1A52A0FE82A00677FCE /* SwipeManager.swift */,
+				E7D28CDF2A155D9E001033C5 /* Utilities.swift */,
+				E73FB0C32A177CAC005B3EE6 /* String.extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -181,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 316AC1852A0FE4A000677FCE /* Build configuration list for PBXNativeTarget "MovieNight-iOS" */;
 			buildPhases = (
+				1DE85637E78842FF3C08D407 /* [CP] Check Pods Manifest.lock */,
 				316AC16D2A0FE49F00677FCE /* Sources */,
 				316AC16E2A0FE49F00677FCE /* Frameworks */,
 				316AC16F2A0FE49F00677FCE /* Resources */,
+				B9DF6DAF35C16188655A4E89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,14 +278,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F635ED2A1A83C000D40775 /* Auth.storyboard in Resources */,
 				316AC1812A0FE4A000677FCE /* LaunchScreen.storyboard in Resources */,
 				316AC17E2A0FE4A000677FCE /* Assets.xcassets in Resources */,
+				E7D28CDE2A151FB9001033C5 /* GoogleService-Info.plist in Resources */,
+				E7EE5E662A1582AA00608DE2 /* Images.xcassets in Resources */,
+				E73FB0C62A178804005B3EE6 /* Strings.strings in Resources */,
 				316AC1902A0FE5AC00677FCE /* README.md in Resources */,
 				316AC17C2A0FE49F00677FCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DE85637E78842FF3C08D407 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieNight-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9DF6DAF35C16188655A4E89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		316AC16D2A0FE49F00677FCE /* Sources */ = {
@@ -249,16 +341,19 @@
 				316AC1A42A0FE81D00677FCE /* GenreSelectionHelper.swift in Sources */,
 				316AC1A22A0FE81300677FCE /* FirebaseManager.swift in Sources */,
 				316AC1AD2A0FE9C900677FCE /* AccountSettingsViewController.swift in Sources */,
-				316AC1792A0FE49F00677FCE /* ViewController.swift in Sources */,
+				316AC1792A0FE49F00677FCE /* AuthenticationViewController.swift in Sources */,
 				316AC1A92A0FE84800677FCE /* MovieListAPI.swift in Sources */,
+				E7385E632A14E1020048599B /* SignUpViewController.swift in Sources */,
+				E7D28CE02A155D9E001033C5 /* Utilities.swift in Sources */,
 				316AC1AB2A0FE9A100677FCE /* HomeViewController.swift in Sources */,
 				316AC1B32A0FEA0100677FCE /* OnboardingViewController.swift in Sources */,
-				316AC1B52A0FEA1900677FCE /* AuthViewController.swift in Sources */,
 				316AC1A62A0FE82A00677FCE /* SwipeManager.swift in Sources */,
 				316AC1B12A0FE9F200677FCE /* BrowseViewController.swift in Sources */,
 				316AC1752A0FE49F00677FCE /* AppDelegate.swift in Sources */,
 				316AC1772A0FE49F00677FCE /* SceneDelegate.swift in Sources */,
+				E73FB0C42A177CAC005B3EE6 /* String.extension.swift in Sources */,
 				316AC19E2A0FE7F800677FCE /* User.swift in Sources */,
+				E7385E612A14E0F50048599B /* LoginViewController.swift in Sources */,
 				316AC1A02A0FE7FF00677FCE /* Movie.swift in Sources */,
 				316AC1AF2A0FE9DC00677FCE /* WatchListViewController.swift in Sources */,
 				316AC1B72A0FEA8600677FCE /* SwipeBrain.swift in Sources */,
@@ -403,6 +498,7 @@
 		};
 		316AC1862A0FE4A000677FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E96FD80F4F8164426B138C /* Pods-MovieNight-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,6 +533,7 @@
 		};
 		316AC1872A0FE4A000677FCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB892657357DFF92DE10A9E2 /* Pods-MovieNight-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
