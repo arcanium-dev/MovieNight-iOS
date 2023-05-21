@@ -11,8 +11,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        if Auth.auth().currentUser == nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if Auth.auth().currentUser == nil { // Not logged in
+            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
             let authNavController = storyboard.instantiateViewController(withIdentifier: "AuthNavController")
             window.rootViewController = authNavController
         } else {
