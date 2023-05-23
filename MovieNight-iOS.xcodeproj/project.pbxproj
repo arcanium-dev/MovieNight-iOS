@@ -21,7 +21,7 @@
 		316AC1A62A0FE82A00677FCE /* SwipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1A52A0FE82A00677FCE /* SwipeManager.swift */; };
 		316AC1A92A0FE84800677FCE /* MovieListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1A82A0FE84800677FCE /* MovieListAPI.swift */; };
 		316AC1AB2A0FE9A100677FCE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1AA2A0FE9A100677FCE /* HomeViewController.swift */; };
-		316AC1AD2A0FE9C900677FCE /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1AC2A0FE9C900677FCE /* AccountSettingsViewController.swift */; };
+		316AC1AD2A0FE9C900677FCE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1AC2A0FE9C900677FCE /* ProfileViewController.swift */; };
 		316AC1AF2A0FE9DC00677FCE /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1AE2A0FE9DC00677FCE /* WatchListViewController.swift */; };
 		316AC1B12A0FE9F200677FCE /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1B02A0FE9F200677FCE /* BrowseViewController.swift */; };
 		316AC1B32A0FEA0100677FCE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1B22A0FEA0100677FCE /* OnboardingViewController.swift */; };
@@ -55,7 +55,7 @@
 		316AC1A52A0FE82A00677FCE /* SwipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeManager.swift; sourceTree = "<group>"; };
 		316AC1A82A0FE84800677FCE /* MovieListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListAPI.swift; sourceTree = "<group>"; };
 		316AC1AA2A0FE9A100677FCE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		316AC1AC2A0FE9C900677FCE /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		316AC1AC2A0FE9C900677FCE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		316AC1AE2A0FE9DC00677FCE /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
 		316AC1B02A0FE9F200677FCE /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		316AC1B22A0FEA0100677FCE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 				316AC1782A0FE49F00677FCE /* AuthenticationViewController.swift */,
 				316AC1B22A0FEA0100677FCE /* OnboardingViewController.swift */,
 				316AC1AA2A0FE9A100677FCE /* HomeViewController.swift */,
-				316AC1AC2A0FE9C900677FCE /* AccountSettingsViewController.swift */,
+				316AC1AC2A0FE9C900677FCE /* ProfileViewController.swift */,
 				316AC1AE2A0FE9DC00677FCE /* WatchListViewController.swift */,
 				316AC1B02A0FE9F200677FCE /* BrowseViewController.swift */,
 				E7385E602A14E0F50048599B /* LoginViewController.swift */,
@@ -340,7 +340,7 @@
 			files = (
 				316AC1A42A0FE81D00677FCE /* GenreSelectionHelper.swift in Sources */,
 				316AC1A22A0FE81300677FCE /* FirebaseManager.swift in Sources */,
-				316AC1AD2A0FE9C900677FCE /* AccountSettingsViewController.swift in Sources */,
+				316AC1AD2A0FE9C900677FCE /* ProfileViewController.swift in Sources */,
 				316AC1792A0FE49F00677FCE /* AuthenticationViewController.swift in Sources */,
 				316AC1A92A0FE84800677FCE /* MovieListAPI.swift in Sources */,
 				E7385E632A14E1020048599B /* SignUpViewController.swift in Sources */,

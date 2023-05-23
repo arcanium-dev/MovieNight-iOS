@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="520" y="-218"/>
         </scene>
-        <!--HomeViewController-->
+        <!--TabBarController-->
         <scene sceneID="BcS-Xo-e0f">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="HomeNavigationController" storyboardName="Main" referencedIdentifier="HomeViewController" id="6TC-Jb-bJN" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="TabBarController" storyboardName="Main" referencedIdentifier="TabBarController" id="6TC-Jb-bJN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eLR-BQ-MCS"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73Z-42-dni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -246,7 +246,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RBC-ck-MGJ"/>
+        <segue reference="48A-9P-QHL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = authNavController
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController")
+            let homeNavigationController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
             window.rootViewController = homeNavigationController
         }
         

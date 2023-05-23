@@ -62,7 +62,21 @@ class LoginViewController: UIViewController {
                     // Transition to the home screen
                     self.performSegue(withIdentifier: "LoginToHome", sender: self)
                 }
-                
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoginToHome" {
+            // Set the tab bar controller's navigation controller as the root view controller
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let sceneDelegate = windowScene.delegate as? SceneDelegate,
+               let navigationController = segue.destination as? UINavigationController,
+               let tabBarController = navigationController.topViewController as? UITabBarController {
+                sceneDelegate.window?.rootViewController = navigationController
+
+                // Set the selected view controller as the home tab
+                tabBarController.selectedIndex = 0
             }
         }
     }

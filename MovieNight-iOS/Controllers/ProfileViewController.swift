@@ -1,6 +1,6 @@
 import UIKit
 
-class BrowseViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -9,6 +9,7 @@ class BrowseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
     func configureViewComponents() {
     }
 
