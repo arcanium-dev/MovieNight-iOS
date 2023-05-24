@@ -60,7 +60,10 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     // Transition to the home screen
-                    self.performSegue(withIdentifier: "LoginToHome", sender: self)
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                        sceneDelegate.isLoggedIn = true
+                        sceneDelegate.showHomeScreen(in: sceneDelegate.window!)
+                    }
                 }
             }
         }

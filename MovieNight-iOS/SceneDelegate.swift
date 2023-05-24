@@ -3,6 +3,7 @@ import FirebaseAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
+    var isLoggedIn: Bool = false
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -11,17 +12,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        if Auth.auth().currentUser == nil { // Not logged in
-            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-            let authNavController = storyboard.instantiateViewController(withIdentifier: "AuthNavController")
-            window.rootViewController = authNavController
+        isLoggedIn = Auth.auth().currentUser == nil
+        
+        if isLoggedIn {
+            showHomeScreen(in: window)
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeNavigationController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
-            window.rootViewController = homeNavigationController
+            showHomeScreen(in: window)
         }
         
         window.makeKeyAndVisible()
+    }
+    
+    func showAuthScreen(in window: UIWindow) {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let authNavController = storyboard.instantiateInitialViewController() as? UINavigationController
+        window.rootViewController = authNavController
+    }
+
+    func showHomeScreen(in window: UIWindow) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = storyboard.instantiateInitialViewController() as? UITabBarController
+        let navController = UINavigationController(rootViewController: tabBarController!)
+        window.rootViewController = navController
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

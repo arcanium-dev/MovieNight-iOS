@@ -8,6 +8,13 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Clear the navigation stack
+        if let navigationController = navigationController {
+            navigationController.viewControllers = [self]
+        }
+    }
     
     @IBAction func logOutTapped(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController (title: nil,

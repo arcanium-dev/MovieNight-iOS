@@ -55,7 +55,10 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     // Transition to the home screen
-                    self.performSegue(withIdentifier: "SignUpToHome", sender: self)
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                        sceneDelegate.isLoggedIn = true
+                        sceneDelegate.showHomeScreen(in: sceneDelegate.window!)
+                    }
                 }
             }
         }
