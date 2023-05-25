@@ -32,8 +32,8 @@ class LoginViewController: UIViewController {
         }
         // Validate Fields
         if let errorMessage = Utilities.validateFields(email: emailTextField.text, password: passwordTextField.text, authFlag: "Login") {
-               return errorMessage
-           }
+            return errorMessage
+        }
         return nil
     }
     
@@ -60,9 +60,10 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     // Transition to the home screen
-                    self.performSegue(withIdentifier: "LoginToHome", sender: self)
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                        sceneDelegate.showHomeScreen()
+                    }
                 }
-                
             }
         }
     }

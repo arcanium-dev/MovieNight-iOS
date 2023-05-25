@@ -4,24 +4,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        
-        if Auth.auth().currentUser == nil { // Not logged in
-            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-            let authNavController = storyboard.instantiateViewController(withIdentifier: "AuthNavController")
-            window.rootViewController = authNavController
+
+        let isLoggedIn = Auth.auth().currentUser != nil
+
+        if isLoggedIn {
+            showHomeScreen()
         } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let homeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController")
-            window.rootViewController = homeNavigationController
+            showAuthScreen()
         }
-        
+
         window.makeKeyAndVisible()
+    }
+    
+    func showAuthScreen() {
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let authNavController = storyboard.instantiateInitialViewController() as? UINavigationController
+        window?.rootViewController = authNavController
+    }
+
+    func showHomeScreen() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        tabBarController.selectedViewController = tabBarController.viewControllers?[0]
+        
+        // Set the tab bar controller as the root view controller
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let delegate = windowScene.delegate as? SceneDelegate {
+            delegate.window?.rootViewController = tabBarController
+            delegate.window?.makeKeyAndVisible()
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
