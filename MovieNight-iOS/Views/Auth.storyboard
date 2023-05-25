@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="-262" y="12"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Log In-->
         <scene sceneID="lf9-Qi-rlu">
             <objects>
                 <viewController storyboardIdentifier="Login" id="fau-9S-Ejm" customClass="LoginViewController" customModule="MovieNight_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,19 +122,18 @@
                             <constraint firstItem="Pgl-MO-hOS" firstAttribute="trailing" secondItem="LWM-gY-DVv" secondAttribute="trailing" constant="40" id="v31-JW-OFJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PDs-cs-Ob8"/>
+                    <navigationItem key="navigationItem" title="Log In" id="PDs-cs-Ob8"/>
                     <connections>
                         <outlet property="emailTextField" destination="Ieh-zF-GIq" id="AuB-uC-wX2"/>
                         <outlet property="errorLabel" destination="gxS-y6-9NE" id="kqQ-DT-wAO"/>
                         <outlet property="passwordTextField" destination="XCs-hf-3eq" id="J2h-1U-FfU"/>
-                        <segue destination="6TC-Jb-bJN" kind="show" identifier="LoginToHome" id="48A-9P-QHL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KD-39-FqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="520" y="433"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Sign Up-->
         <scene sceneID="odE-jv-NIF">
             <objects>
                 <viewController id="d6O-pZ-7yN" customClass="SignUpViewController" customModule="MovieNight_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,29 +201,18 @@
                             <constraint firstItem="4cs-Dq-FXJ" firstAttribute="leading" secondItem="Hlg-76-SxM" secondAttribute="leading" constant="40" id="xNY-mu-YkO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FR5-FW-FVn"/>
+                    <navigationItem key="navigationItem" title="Sign Up" id="FR5-FW-FVn"/>
                     <connections>
                         <outlet property="emailTextField" destination="PxZ-dC-EfC" id="1Md-L1-P68"/>
                         <outlet property="errorLabel" destination="l5W-pF-xA2" id="ohP-gh-KUs"/>
                         <outlet property="firstnameTextField" destination="4qK-5H-Ckh" id="Hqd-dC-Fe8"/>
                         <outlet property="lastnameTextField" destination="OBI-Bl-3k8" id="rrD-BF-Bne"/>
                         <outlet property="passwordTextField" destination="qLx-T9-aOT" id="zrr-3j-LXj"/>
-                        <segue destination="6TC-Jb-bJN" kind="show" identifier="SignUpToHome" id="RBC-ck-MGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92J-rl-Dyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="520" y="-218"/>
-        </scene>
-        <!--TabBarController-->
-        <scene sceneID="BcS-Xo-e0f">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="TabBarController" storyboardName="Main" referencedIdentifier="TabBarController" id="6TC-Jb-bJN" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="eLR-BQ-MCS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="73Z-42-dni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1813" y="73"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ngm-jc-mlS">
@@ -245,9 +233,6 @@
             <point key="canvasLocation" x="-1002.2900763358779" y="11.971830985915494"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="48A-9P-QHL"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

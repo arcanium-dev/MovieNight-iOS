@@ -55,9 +55,15 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     // Transition to the home screen
-                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-                       let window = sceneDelegate.window {
-                        sceneDelegate.showHomeScreen(in: window)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                    tabBarController.selectedViewController = tabBarController.viewControllers?[0]
+                    
+                    // Set the tab bar controller as the root view controller
+                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let delegate = windowScene.delegate as? SceneDelegate {
+                        delegate.window?.rootViewController = tabBarController
+                        delegate.window?.makeKeyAndVisible()
                     }
                 }
             }
@@ -86,20 +92,4 @@ class SignUpViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SignUpToHome" {
-            // Set the tab bar controller's navigation controller as the root view controller
-            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-               let sceneDelegate = windowScene.delegate as? SceneDelegate,
-               let navigationController = segue.destination as? UINavigationController,
-               let tabBarController = navigationController.topViewController as? UITabBarController {
-                sceneDelegate.window?.rootViewController = navigationController
-
-                // Set the selected view controller as the home tab
-                tabBarController.selectedIndex = 0
-            }
-        }
-    }
-    
 }

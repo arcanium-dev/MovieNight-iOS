@@ -26,10 +26,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func showHomeScreen(in window: UIWindow) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateInitialViewController() as? UITabBarController
-        let navController = UINavigationController(rootViewController: tabBarController!)
-        window.rootViewController = navController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Replace "Main" with your storyboard name
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        tabBarController.selectedViewController = tabBarController.viewControllers?[0]
+        
+        // Set the tab bar controller as the root view controller
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let delegate = windowScene.delegate as? SceneDelegate {
+            delegate.window?.rootViewController = tabBarController
+            delegate.window?.makeKeyAndVisible()
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
