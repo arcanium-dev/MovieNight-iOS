@@ -26,9 +26,8 @@ class HomeViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             
-            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-               let window = sceneDelegate.window {
-                sceneDelegate.showAuthScreen(in: window)
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                sceneDelegate.showAuthScreen()
             }
         } catch let error {
             print("Failed to sign out", error)

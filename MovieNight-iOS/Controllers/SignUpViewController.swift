@@ -55,15 +55,8 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     // Transition to the home screen
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                    tabBarController.selectedViewController = tabBarController.viewControllers?[0]
-                    
-                    // Set the tab bar controller as the root view controller
-                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                       let delegate = windowScene.delegate as? SceneDelegate {
-                        delegate.window?.rootViewController = tabBarController
-                        delegate.window?.makeKeyAndVisible()
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                        sceneDelegate.showHomeScreen()
                     }
                 }
             }

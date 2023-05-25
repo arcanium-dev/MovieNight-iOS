@@ -9,23 +9,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        
-        if Auth.auth().currentUser != nil {
-            showHomeScreen(in: window)
+
+        let isLoggedIn = Auth.auth().currentUser != nil
+
+        if isLoggedIn {
+            showHomeScreen()
         } else {
-            showAuthScreen(in: window)
+            showAuthScreen()
         }
-        
+
         window.makeKeyAndVisible()
     }
     
-    func showAuthScreen(in window: UIWindow) {
+    func showAuthScreen() {
         let storyboard = UIStoryboard(name: "Auth", bundle: nil)
         let authNavController = storyboard.instantiateInitialViewController() as? UINavigationController
-        window.rootViewController = authNavController
+        window?.rootViewController = authNavController
     }
 
-    func showHomeScreen(in window: UIWindow) {
+    func showHomeScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         tabBarController.selectedViewController = tabBarController.viewControllers?[0]
