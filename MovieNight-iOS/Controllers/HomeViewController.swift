@@ -34,16 +34,11 @@ class HomeViewController: UIViewController {
     func signOut() {
         do {
             try Auth.auth().signOut()
-    
-            guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate else {
-                return
+            
+            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+               let window = sceneDelegate.window {
+                sceneDelegate.showAuthScreen(in: window)
             }
-            
-            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-            let authNavController = storyboard.instantiateViewController(withIdentifier: "AuthNavController")
-            
-            sceneDelegate.window?.rootViewController = authNavController
-            sceneDelegate.window?.makeKeyAndVisible()
         } catch let error {
             print("Failed to sign out", error)
         }
