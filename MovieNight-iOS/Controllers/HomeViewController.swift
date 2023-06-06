@@ -1,9 +1,17 @@
 import UIKit
 import FirebaseAuth
+import Foundation
 class HomeViewController: UIViewController {
+    
+    var movieManager = MovieManager()
+    var movieIdsList: MovieIds?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        movieManager.delegate = self
+        movieManager.fetchMovies()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -33,4 +41,30 @@ class HomeViewController: UIViewController {
             print("Failed to sign out", error)
         }
     }
+}
+
+//MARK: - Movies Delegates
+
+extension HomeViewController: MovieManagerDelegate {
+    func didUpdateMovie(_ movieManager: MovieManager, _ movieDetails: MovieDetails) {
+        DispatchQueue.main.async {
+            //Do functions here e.g get image and display
+            print(movieDetails.title)
+        }
+    }
+    
+    func didUpdateMovieList(_ movieManager: MovieManager, _ movieIds: MovieIds) {
+        DispatchQueue.main.async {
+            //Gets list of movie codes in format "/title/ttxxxxxxx/ and loads the first one in the queue up"
+            self.movieIdsList = movieIds
+            let idCode = movieIds.Ids[0].components(separatedBy: "/")[2]
+            movieManager.fetchMovieDetails(movieId: idCode)
+        }
+    }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
+    }
+    
+    
 }

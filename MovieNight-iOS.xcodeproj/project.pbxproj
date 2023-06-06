@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13E691342A2FCB75007D09F3 /* MovieIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E691332A2FCB75007D09F3 /* MovieIds.swift */; };
+		13E691362A2FCC48007D09F3 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E691352A2FCC48007D09F3 /* MovieDetails.swift */; };
+		13E691382A2FCE75007D09F3 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E691372A2FCE75007D09F3 /* MovieManager.swift */; };
 		316AC1752A0FE49F00677FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1742A0FE49F00677FCE /* AppDelegate.swift */; };
 		316AC1772A0FE49F00677FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1762A0FE49F00677FCE /* SceneDelegate.swift */; };
 		316AC1792A0FE49F00677FCE /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316AC1782A0FE49F00677FCE /* AuthenticationViewController.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13E691332A2FCB75007D09F3 /* MovieIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieIds.swift; sourceTree = "<group>"; };
+		13E691352A2FCC48007D09F3 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		13E691372A2FCE75007D09F3 /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
 		14FF23DDD84405F0BFF9AA16 /* Pods_MovieNight_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieNight_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		316AC1712A0FE49F00677FCE /* MovieNight-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovieNight-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		316AC1742A0FE49F00677FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 				316AC19D2A0FE7F800677FCE /* User.swift */,
 				316AC19F2A0FE7FF00677FCE /* Movie.swift */,
 				316AC1B62A0FEA8600677FCE /* SwipeBrain.swift */,
+				13E691332A2FCB75007D09F3 /* MovieIds.swift */,
+				13E691352A2FCC48007D09F3 /* MovieDetails.swift */,
+				13E691372A2FCE75007D09F3 /* MovieManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,13 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E691382A2FCE75007D09F3 /* MovieManager.swift in Sources */,
 				316AC1A42A0FE81D00677FCE /* GenreSelectionHelper.swift in Sources */,
+				13E691342A2FCB75007D09F3 /* MovieIds.swift in Sources */,
 				316AC1A22A0FE81300677FCE /* FirebaseManager.swift in Sources */,
 				316AC1AD2A0FE9C900677FCE /* ProfileViewController.swift in Sources */,
 				316AC1792A0FE49F00677FCE /* AuthenticationViewController.swift in Sources */,
 				316AC1A92A0FE84800677FCE /* MovieListAPI.swift in Sources */,
 				E7385E632A14E1020048599B /* SignUpViewController.swift in Sources */,
 				E7D28CE02A155D9E001033C5 /* Utilities.swift in Sources */,
+				13E691362A2FCC48007D09F3 /* MovieDetails.swift in Sources */,
 				316AC1AB2A0FE9A100677FCE /* HomeViewController.swift in Sources */,
 				316AC1B32A0FEA0100677FCE /* OnboardingViewController.swift in Sources */,
 				316AC1A62A0FE82A00677FCE /* SwipeManager.swift in Sources */,
