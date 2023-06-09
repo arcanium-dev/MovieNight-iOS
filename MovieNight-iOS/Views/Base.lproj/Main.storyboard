@@ -43,7 +43,6 @@
         <!--Browse-->
         <scene sceneID="8il-xJ-J8p">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C3v-Q3-zkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="1HG-GC-hXh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Browse" selectedImage="popcorn.fill" catalog="system" id="lxf-fI-eCf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIB-20-MZH">
@@ -54,6 +53,7 @@
                         <segue destination="kwV-91-Jh7" kind="relationship" relationship="rootViewController" id="mBr-Pi-AoU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3v-Q3-zkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1456" y="96"/>
         </scene>
@@ -85,7 +85,6 @@
         <!--Profile-->
         <scene sceneID="eWi-fA-cw7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nZS-xQ-wCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Xpf-aq-NsA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.crop.circle.fill" catalog="system" id="mRv-rd-QhL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dIr-5c-QJH">
@@ -96,6 +95,7 @@
                         <segue destination="q1t-Ff-wgi" kind="relationship" relationship="rootViewController" id="DuI-6W-7SA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZS-xQ-wCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2334" y="96"/>
         </scene>
@@ -146,7 +146,6 @@
         <!--Home-->
         <scene sceneID="lJz-E4-Sak">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Akw-uD-bnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iGF-Ih-Dh5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="6VQ-KY-ks0"/>
                     <toolbarItems/>
@@ -160,6 +159,7 @@
                         <segue destination="cDp-kO-h6M" kind="relationship" relationship="rootViewController" id="b8y-WO-tsF"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akw-uD-bnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576" y="96"/>
         </scene>
