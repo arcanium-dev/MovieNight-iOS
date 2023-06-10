@@ -93,7 +93,7 @@ class HomeViewController: UIViewController {
     }
     
     
-    func nextImage() {
+    func nextCardImage() {
         currentIndex = (currentIndex + 1) % movieCardArray.count
         movieCardImageView.image = movieCardArray[currentIndex]
         updateGradientBackground()
@@ -135,7 +135,7 @@ class HomeViewController: UIViewController {
                 UIView.animate(withDuration: 0.3, animations: {
                     card.center.x = destinationX
                 }) { _ in
-                    self.nextImage()
+                    self.nextCardImage()
                     // Reset card position
                     card.center = self.initialCardCenter
                     card.transform = .identity
