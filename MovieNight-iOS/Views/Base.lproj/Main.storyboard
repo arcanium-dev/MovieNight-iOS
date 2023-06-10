@@ -51,9 +51,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cgn-VJ-DAQ"/>
                     <connections>
-                        <outlet property="movieCardImageView" destination="G0D-FZ-v7D" id="PZe-Ku-F6h"/>
-                        <outlet property="nextCard1ImageView" destination="Xmm-og-EEj" id="99N-KM-LF7"/>
-                        <outlet property="nextCard2ImageView" destination="GQo-Fv-W0m" id="tY9-N9-3aF"/>
+                        <outlet property="firstCardImageView" destination="G0D-FZ-v7D" id="PZe-Ku-F6h"/>
+                        <outlet property="secondCardImageView" destination="GQo-Fv-W0m" id="tY9-N9-3aF"/>
+                        <outlet property="thirdCardImageView" destination="Xmm-og-EEj" id="99N-KM-LF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YwG-AL-bCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

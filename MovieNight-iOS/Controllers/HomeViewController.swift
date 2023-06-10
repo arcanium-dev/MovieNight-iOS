@@ -3,15 +3,14 @@ import UIImageColors
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var nextCard1ImageView: UIImageView!
-    @IBOutlet weak var nextCard2ImageView: UIImageView!
-    @IBOutlet weak var movieCardImageView: UIImageView!
+    @IBOutlet weak var thirdCardImageView: UIImageView!
+    @IBOutlet weak var secondCardImageView: UIImageView!
+    @IBOutlet weak var firstCardImageView: UIImageView!
     private var gradientLayer: CAGradientLayer?
-    private var currentIndex = 0
+    private var cardIndex = 0
     private var initialCardCenter: CGPoint = .zero
     var movieManager = MovieManager()
     var movieIdsList: MovieIds?
-    
     let movieCardArray = [#imageLiteral(resourceName: "Image 4"), #imageLiteral(resourceName: "Image 2"), #imageLiteral(resourceName: "Image 5"), #imageLiteral(resourceName: "Image 1"), #imageLiteral(resourceName: "Image 3"), #imageLiteral(resourceName: "doctorStrange"), #imageLiteral(resourceName: "Image")]
     
     override func viewDidLoad() {
@@ -26,16 +25,16 @@ class HomeViewController: UIViewController {
     func setUpComponents() {
         
         if let firstImage = movieCardArray.first {
-            movieCardImageView.image = firstImage
+            firstCardImageView.image = firstImage
             updateGradientBackground()
         }
         
         createDefaultBackground()
         
         // Create movieCardImageView programmatically
-        configureImageView(movieCardImageView)
-        configureImageView(nextCard1ImageView)
-        configureImageView(nextCard2ImageView)
+        configureImageView(firstCardImageView)
+        configureImageView(thirdCardImageView)
+        configureImageView(secondCardImageView)
         
         updateCardImages()
     }
@@ -57,22 +56,22 @@ class HomeViewController: UIViewController {
     }
     
     private func updateCardImages() {
-        let currentImage = movieCardArray[currentIndex]
-        let nextImage1 = movieCardArray[(currentIndex + 1) % movieCardArray.count]
-        let nextImage2 = movieCardArray[(currentIndex + 2) % movieCardArray.count]
+        let firstImage = movieCardArray[cardIndex]
+        let secondImage = movieCardArray[(cardIndex + 1) % movieCardArray.count]
+        let thirdImage = movieCardArray[(cardIndex + 2) % movieCardArray.count]
         
-        movieCardImageView.image = currentImage
-        nextCard1ImageView.image = nextImage1
-        nextCard2ImageView.image = nextImage2
+        firstCardImageView.image = firstImage
+        thirdCardImageView.image = secondImage
+        secondCardImageView.image = thirdImage
         
         // Set initial positions for the next cards
-        nextCard1ImageView.center = CGPoint(x: movieCardImageView.center.x, y: movieCardImageView.center.y - 10)
-        nextCard2ImageView.center = CGPoint(x: movieCardImageView.center.x, y: movieCardImageView.center.y - 20)
+        thirdCardImageView.center = CGPoint(x: firstCardImageView.center.x, y: firstCardImageView.center.y - 10)
+        secondCardImageView.center = CGPoint(x: firstCardImageView.center.x, y: firstCardImageView.center.y - 20)
     }
     
     
     private func updateGradientBackground() {
-        guard let image = movieCardImageView.image else { return }
+        guard let image = firstCardImageView.image else { return }
         
         // Create a higher-quality image representation
         let size = CGSize(width: view.bounds.width * 2, height: view.bounds.height * 2)
@@ -94,14 +93,14 @@ class HomeViewController: UIViewController {
     
     
     func nextCardImage() {
-        currentIndex = (currentIndex + 1) % movieCardArray.count
-        movieCardImageView.image = movieCardArray[currentIndex]
+        cardIndex = (cardIndex + 1) % movieCardArray.count
+        firstCardImageView.image = movieCardArray[cardIndex]
         updateGradientBackground()
     }
     
     private func setUpGestureRecognizers() {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
-        movieCardImageView.addGestureRecognizer(panGestureRecognizer)
+        firstCardImageView.addGestureRecognizer(panGestureRecognizer)
     }
     
     @objc private func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
@@ -118,7 +117,6 @@ class HomeViewController: UIViewController {
             let rotationAngle = CGFloat.pi / 8 * rotationStrength
             let transform = CGAffineTransform(rotationAngle: rotationAngle)
             card.transform = transform
-            
             // Adjust position of the first card only
             let cardTranslationX = card.center.x - initialCardCenter.x
             card.center.x = initialCardCenter.x + cardTranslationX
@@ -147,8 +145,8 @@ class HomeViewController: UIViewController {
                 UIView.animate(withDuration: 0.3) {
                     card.center = self.initialCardCenter
                     card.transform = .identity
-                    self.nextCard1ImageView.center = self.initialCardCenter
-                    self.nextCard2ImageView.center = self.initialCardCenter
+                    self.thirdCardImageView.center = self.initialCardCenter
+                    self.secondCardImageView.center = self.initialCardCenter
                 }
             }
         default:
