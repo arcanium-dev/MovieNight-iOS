@@ -33,22 +33,18 @@ class HomeViewController: UIViewController {
         createDefaultBackground()
         
         // Create movieCardImageView programmatically
-        movieCardImageView.translatesAutoresizingMaskIntoConstraints = false
-        movieCardImageView.center = view.center
-        movieCardImageView.layer.cornerRadius = 10
-        movieCardImageView.clipsToBounds = true
-        
-        nextCard1ImageView.translatesAutoresizingMaskIntoConstraints = false
-        nextCard1ImageView.center = view.center
-        nextCard1ImageView.layer.cornerRadius = 10
-        nextCard1ImageView.clipsToBounds = true
-        
-        nextCard2ImageView.translatesAutoresizingMaskIntoConstraints = false
-        nextCard2ImageView.center = view.center
-        nextCard2ImageView.layer.cornerRadius = 10
-        nextCard2ImageView.clipsToBounds = true
+        configureImageView(movieCardImageView)
+        configureImageView(nextCard1ImageView)
+        configureImageView(nextCard2ImageView)
         
         updateCardImages()
+    }
+    
+    func configureImageView(_ imageView: UIImageView) {
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.center = view.center
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
     }
     
     private func createDefaultBackground() {
