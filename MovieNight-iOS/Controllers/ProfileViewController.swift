@@ -4,23 +4,14 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewComponents()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func logOutTapped(_ sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: nil,
-                                                message: "Are you sure you want to sign out?",
-                                                preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Sign Out",
-                                                style: .destructive,
-                                                handler: { [weak self] _ in
-                                                    self?.signOut()
-                                                }))
-        alertController.addAction(UIAlertAction(title: "Cancel",
-                                                style: .cancel,
-                                                handler: nil))
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { [weak self] _ in
+            self?.signOut()
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
     
@@ -35,9 +26,4 @@ class ProfileViewController: UIViewController {
             print("Failed to sign out", error)
         }
     }
-    
-
-    func configureViewComponents() {
-    }
-
 }
