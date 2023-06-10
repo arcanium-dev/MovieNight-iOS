@@ -9,6 +9,8 @@ class HomeViewController: UIViewController {
     private var gradientLayer: CAGradientLayer?
     private var currentIndex = 0
     private var initialCardCenter: CGPoint = .zero
+    var movieManager = MovieManager()
+    var movieIdsList: MovieIds?
     
     let movieCardArray = [#imageLiteral(resourceName: "Image 4"), #imageLiteral(resourceName: "Image 2"), #imageLiteral(resourceName: "Image 5"), #imageLiteral(resourceName: "Image 1"), #imageLiteral(resourceName: "Image 3"), #imageLiteral(resourceName: "doctorStrange"), #imageLiteral(resourceName: "Image")]
     
@@ -16,7 +18,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUpComponents()
         setUpGestureRecognizers()
+        movieManager.delegate = self
+        movieManager.fetchMovies()
     }
+    
     
     func setUpComponents() {
         
@@ -154,4 +159,30 @@ class HomeViewController: UIViewController {
             break
         }
     }
+}
+
+//MARK: - Movies Delegates
+
+extension HomeViewController: MovieManagerDelegate {
+    func didUpdateMovie(_ movieManager: MovieManager, _ movieDetails: MovieDetails) {
+        DispatchQueue.main.async {
+            //Do functions here e.g get image and display
+            print(movieDetails.title)
+        }
+    }
+    
+    func didUpdateMovieList(_ movieManager: MovieManager, _ movieIds: MovieIds) {
+        DispatchQueue.main.async {
+            //Gets list of movie codes in format "/title/ttxxxxxxx/ and loads the first one in the queue up"
+            self.movieIdsList = movieIds
+            let idCode = movieIds.Ids[0].components(separatedBy: "/")[2]
+            movieManager.fetchMovieDetails(movieId: idCode)
+        }
+    }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
+    }
+    
+    
 }
