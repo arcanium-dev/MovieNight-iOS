@@ -9,8 +9,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var firstnameTextField: UITextField!
-    private var gradientLayer: CAGradientLayer?
     @IBOutlet weak var signUpButton: UIButton!
+    private var gradientLayer: CAGradientLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()

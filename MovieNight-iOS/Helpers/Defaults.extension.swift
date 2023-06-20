@@ -43,7 +43,7 @@ extension UITextField {
         textAlignment = .center
         attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "#D3D3D3")]
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "#D3D3D3") ?? UIColor.white]
         )
     }
 }
@@ -75,7 +75,6 @@ extension UIColor {
         return nil
     }
 }
-
 
 extension UIViewController {
     func defaultAuthBackground() {
