@@ -19,4 +19,9 @@ class Utilities {
         
         return nil
     }
+    
+    static func showError(message: String, label: UILabel) {
+            label.text = message
+            label.alpha = 1
+        }
 }

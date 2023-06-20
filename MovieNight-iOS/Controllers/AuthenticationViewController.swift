@@ -11,6 +11,10 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         let titleText = "auth_title".localized
         titleLabel.text = titleText
+        titleLabel.textColor = .white
+        defaultAuthBackground()
+        loginButton.defaultButtonStyle(title: "Login")
+        signUpButton.defaultButtonStyle(title: "Sign Up")
     }
     
     @IBAction func signUpTapped(_ sender: UIButton) {
