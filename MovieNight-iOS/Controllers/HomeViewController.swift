@@ -1,5 +1,6 @@
 import UIKit
 import UIImageColors
+import SDWebImage
 
 class HomeViewController: UIViewController {
     
@@ -12,32 +13,36 @@ class HomeViewController: UIViewController {
     var movieManager = MovieManager()
     var movieIdsList: MovieIds?
     let movieCardArray = [#imageLiteral(resourceName: "Image 4"), #imageLiteral(resourceName: "Image 2"), #imageLiteral(resourceName: "Image 5"), #imageLiteral(resourceName: "Image 1"), #imageLiteral(resourceName: "Image 3"), #imageLiteral(resourceName: "doctorStrange"), #imageLiteral(resourceName: "Image")]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpComponents()
-        setUpGestureRecognizers()
-        movieManager.delegate = self
-        movieManager.fetchMovies()
-    }
-    
-    
-    func setUpComponents() {
+        var moviesList: [MovieDetails]?
+        var batchPage = 1
         
-        if let firstImage = movieCardArray.first {
-            firstCardImageView.image = firstImage
-            updateGradientBackground()
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            updateCardImages()
+            movieManager.delegate = self
+            movieManager.fetchMovies(pageNo: batchPage)
+            setUpComponents()
+            setUpGestureRecognizers()
         }
         
-        createDefaultBackground()
         
-        // Create movieCardImageView programmatically
-        configureImageView(firstCardImageView)
-        configureImageView(thirdCardImageView)
-        configureImageView(secondCardImageView)
-        
-        updateCardImages()
-    }
+        func setUpComponents() {
+
+            if let firstImage = movieCardArray.first {
+                firstCardImageView.image = firstImage
+                updateGradientBackground()
+            }
+
+            createDefaultBackground()
+
+            // Create movieCardImageView programmatically
+            configureImageView(firstCardImageView)
+            configureImageView(thirdCardImageView)
+            configureImageView(secondCardImageView)
+
+            updateCardImages()
+        }
+
     
     func configureImageView(_ imageView: UIImageView) {
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,18 +61,35 @@ class HomeViewController: UIViewController {
     }
     
     private func updateCardImages() {
-        let firstImage = movieCardArray[cardIndex]
-        let secondImage = movieCardArray[(cardIndex + 1) % movieCardArray.count]
-        let thirdImage = movieCardArray[(cardIndex + 2) % movieCardArray.count]
-        
-        firstCardImageView.image = firstImage
-        thirdCardImageView.image = secondImage
-        secondCardImageView.image = thirdImage
-        
-        // Set initial positions for the next cards
-        thirdCardImageView.center = CGPoint(x: firstCardImageView.center.x, y: firstCardImageView.center.y - 10)
-        secondCardImageView.center = CGPoint(x: firstCardImageView.center.x, y: firstCardImageView.center.y - 20)
-    }
+            if let listOfMovies = moviesList {
+                if cardIndex > (listOfMovies.count - 1) {
+                    if batchPage == 5 {
+                        batchPage = 1
+                    } else {
+                        batchPage += 1
+                    }
+                    cardIndex = 0
+                    movieManager.fetchMovies(pageNo: batchPage)
+                }
+                let firstImage = listOfMovies[cardIndex]
+                let secondImage = listOfMovies[(cardIndex + 1) % (listOfMovies.count)]
+                let thirdImage = listOfMovies[(cardIndex + 2) % (listOfMovies.count)]
+                
+                firstCardImageView.sd_setImage(with: URL(string: firstImage.primaryImage.url), placeholderImage: #imageLiteral(resourceName: "Loading"))
+                thirdCardImageView.sd_setImage(with: URL(string: secondImage.primaryImage.url), placeholderImage: #imageLiteral(resourceName: "Loading"))
+                secondCardImageView.sd_setImage(with: URL(string: thirdImage.primaryImage.url), placeholderImage: #imageLiteral(resourceName: "Loading"))
+                
+            } else {
+                firstCardImageView.image =  #imageLiteral(resourceName: "Loading")
+                thirdCardImageView.image =  #imageLiteral(resourceName: "Loading")
+                secondCardImageView.image =  #imageLiteral(resourceName: "Loading")
+            }
+            
+            // Set initial positions for the next cards
+            thirdCardImageView.center = CGPoint(x: firstCardImageView.center.x, y: firstCardImageView.center.y - 10)
+            secondCardImageView.center = CGPoint(x: firstCardImageView.center.x, y: firstCardImageView.center.y - 20)
+        }
+
     
     
     private func updateGradientBackground() {
@@ -93,10 +115,12 @@ class HomeViewController: UIViewController {
     
     
     func nextCardImage() {
-        cardIndex = (cardIndex + 1) % movieCardArray.count
-        firstCardImageView.image = movieCardArray[cardIndex]
-        updateGradientBackground()
-    }
+            if let listOfMovies = moviesList {
+                cardIndex = (cardIndex + 1)
+                firstCardImageView.sd_setImage(with: URL(string: listOfMovies[cardIndex % (listOfMovies.count)].primaryImage.url), placeholderImage: #imageLiteral(resourceName: "Loading"))
+                updateGradientBackground()
+            }
+        }
     
     private func setUpGestureRecognizers() {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
@@ -158,19 +182,12 @@ class HomeViewController: UIViewController {
 //MARK: - Movies Delegates
 
 extension HomeViewController: MovieManagerDelegate {
-    func didUpdateMovie(_ movieManager: MovieManager, _ movieDetails: MovieDetails) {
+    func didUpdateMovieList(_ movieManager: MovieManager, _ movieList: [MovieDetails]) {
         DispatchQueue.main.async {
             //Do functions here e.g get image and display
-            print(movieDetails.title)
-        }
-    }
-    
-    func didUpdateMovieList(_ movieManager: MovieManager, _ movieIds: MovieIds) {
-        DispatchQueue.main.async {
-            //Gets list of movie codes in format "/title/ttxxxxxxx/ and loads the first one in the queue up"
-            self.movieIdsList = movieIds
-            let idCode = movieIds.Ids[0].components(separatedBy: "/")[2]
-            movieManager.fetchMovieDetails(movieId: idCode)
+            print(movieList[0].originalTitleText.text)
+            self.moviesList = movieList
+            self.updateCardImages()
         }
     }
     

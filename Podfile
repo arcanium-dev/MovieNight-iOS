@@ -8,7 +8,7 @@ target 'MovieNight-iOS' do
   pod 'FirebaseFirestore'
   pod 'FirebaseCore'
   pod 'UIImageColors'
-  
+  pod 'SDWebImage'
   post_install do |installer|
       installer.generated_projects.each do |project|
             project.targets.each do |target|
