@@ -114,15 +114,15 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVE-xE-S4t">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVE-xE-S4t" customClass="TransitionButton" customModule="TransitionButton">
                                         <rect key="frame" x="0.0" y="140" width="313" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="DkE-Mh-0Lv"/>
                                         </constraints>
                                         <color key="tintColor" red="0.6549019814" green="0.0" blue="0.33345372899523812" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Login">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.6549019814" green="0.15686275059999999" blue="0.41176474089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -200,14 +200,14 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmt-S1-cnw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmt-S1-cnw" customClass="TransitionButton" customModule="TransitionButton">
                                         <rect key="frame" x="0.0" y="280" width="313" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="B7W-Gz-txH"/>
                                         </constraints>
                                         <color key="tintColor" red="0.6549019814" green="0.15686275059999999" blue="0.41176474089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="capsule">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.6549019814" green="0.15686275059999999" blue="0.41176474089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -272,6 +272,11 @@
             <point key="canvasLocation" x="-1002.2900763358779" y="11.971830985915494"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="EVE-xE-S4t">
+            <size key="intrinsicContentSize" width="64" height="32.666666666666664"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

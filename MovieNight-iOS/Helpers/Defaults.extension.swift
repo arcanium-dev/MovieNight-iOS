@@ -30,7 +30,6 @@ extension UIButton {
         setTitle(title, for: .normal)
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont(name: "Poppins-Medium", size: 16)
-        layer.cornerRadius = 20
         layer.masksToBounds = true
         titleLabel?.adjustsFontForContentSizeCategory = true
     }
@@ -92,6 +91,15 @@ extension UIViewController {
         }
         
         view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func defaultBackground(gradientLayer: CAGradientLayer) {
+        
+        if let firstGradient = UIColor(hexString: "#2E1371")?.cgColor,
+           let secondGradient = UIColor(hexString: "#48308D")?.cgColor {
+            gradientLayer.colors = [firstGradient, secondGradient, firstGradient, UIColor.black.cgColor]
+            gradientLayer.locations = [0.0, 0.75, 0.85] // Adjust the location values to make the first color more dominant
+        }
     }
 }
 

@@ -708,12 +708,14 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - PromisesObjC (2.2.0)
+  - TransitionButton (0.5.3)
   - UIImageColors (2.1.0)
 
 DEPENDENCIES:
   - FirebaseAuth
   - FirebaseCore
   - FirebaseFirestore
+  - TransitionButton
   - UIImageColors
 
 SPEC REPOS:
@@ -733,6 +735,7 @@ SPEC REPOS:
     - Libuv-gRPC
     - nanopb
     - PromisesObjC
+    - TransitionButton
     - UIImageColors
 
 SPEC CHECKSUMS:
@@ -751,8 +754,9 @@ SPEC CHECKSUMS:
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
   UIImageColors: d2ef3b0877d203cbb06489eeb78ea8b7788caabe
 
-PODFILE CHECKSUM: a92f0f21005bb05bbb43dddef99ea386c33be23a
+PODFILE CHECKSUM: 545e6dc66d9aa78737df7bf1c534bd3fefc92c68
 
 COCOAPODS: 1.11.3

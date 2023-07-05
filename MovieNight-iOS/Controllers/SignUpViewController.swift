@@ -1,6 +1,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import TransitionButton
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -9,7 +10,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
     @IBOutlet weak var firstnameTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var signUpButton: TransitionButton!
     private var gradientLayer: CAGradientLayer?
     
     override func viewDidLoad() {
@@ -78,7 +79,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        
+        signUpButton.startAnimation()
         guard let name = firstnameTextField.text else { return }
         guard let surname = lastnameTextField.text else { return }
         guard let email = emailTextField.text else { return }
@@ -97,6 +98,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // Validate the fields
         let error = validateFields()
         if let error = error {
+            signUpButton.stopAnimation(animationStyle: .shake)
             Utilities.showError(message: error, label: errorLabel)
         }
         else {
@@ -105,6 +107,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 // Check for errors
                 if let error = error {
                     // There was an error creating the user
+                    signUpButton.stopAnimation(animationStyle: .shake)
                     Utilities.showError(message: "Error creating user: \(error.localizedDescription)", label: errorLabel)
                 }
                 else {
@@ -118,8 +121,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         }
                     }
                     // Transition to the home screen
-                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-                        sceneDelegate.showHomeScreen()
+                    errorLabel.isHidden = true
+                    signUpButton.stopAnimation(animationStyle: .expand, revertAfterDelay: 2) {
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                                sceneDelegate.showHomeScreen()
+                            }
+                        }
                     }
                 }
             }
