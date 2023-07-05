@@ -21,9 +21,7 @@ class HomeViewController: UIViewController {
         movieManager.fetchMovies()
     }
     
-    
     func setUpComponents() {
-        
         if let firstImage = movieCardArray.first {
             firstCardImageView.image = firstImage
             updateGradientBackground()
@@ -91,7 +89,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    
     
     func nextCardImage() {
         cardIndex = (cardIndex + 1) % movieCardArray.count

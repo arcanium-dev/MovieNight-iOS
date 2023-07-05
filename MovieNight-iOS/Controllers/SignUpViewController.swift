@@ -135,7 +135,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func validateFields() -> String? {
-        
         // Check that all fields are filled in
         if firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||

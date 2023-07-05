@@ -64,13 +64,11 @@ extension UIColor {
                     g = CGFloat((hexNumber & 0x00ff00) >> 8) / 255
                     b = CGFloat(hexNumber & 0x0000ff) / 255
                     a = 1
-
                     self.init(red: r, green: g, blue: b, alpha: a)
                     return
                 }
             }
         }
-
         return nil
     }
 }
