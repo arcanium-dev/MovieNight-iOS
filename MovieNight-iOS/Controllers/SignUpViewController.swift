@@ -78,7 +78,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-        
         guard let name = firstnameTextField.text else { return }
         guard let surname = lastnameTextField.text else { return }
         guard let email = emailTextField.text else { return }
@@ -127,7 +126,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     func validateFields() -> String? {
-        
         // Check that all fields are filled in
         if firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||

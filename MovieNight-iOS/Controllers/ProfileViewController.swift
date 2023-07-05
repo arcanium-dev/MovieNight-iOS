@@ -1,7 +1,7 @@
 import UIKit
 import FirebaseAuth
 class ProfileViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,7 +18,6 @@ class ProfileViewController: UIViewController {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            
             if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
                 sceneDelegate.showAuthScreen()
             }

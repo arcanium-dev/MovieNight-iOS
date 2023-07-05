@@ -54,7 +54,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func validateFields() -> String? {
-        
         // Check that all fields are filled in
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
