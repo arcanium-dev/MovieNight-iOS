@@ -49,6 +49,7 @@ class HomeViewController: UIViewController {
         gradientLayer?.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height - (tabBarController?.tabBar.frame.height ?? 0) )
         
         if let gradientLayer = gradientLayer {
+            defaultBackground(gradientLayer: gradientLayer)
             view.layer.insertSublayer(gradientLayer, at: 0)
         }
     }

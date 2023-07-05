@@ -1,12 +1,13 @@
 import UIKit
 import FirebaseAuth
+import TransitionButton
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: TransitionButton!
     private var gradientLayer: CAGradientLayer?
     
     override func viewDidLoad() {
@@ -43,6 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
+        loginButton.startAnimation()
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
@@ -71,24 +73,35 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let error = validateFields()
         
         if let error = error {
+            loginButton.stopAnimation(animationStyle: .shake)
             // There's something wrong with the fields, show error message
             Utilities.showError(message: error, label: errorLabel)
-        }
-        else {
+        } else {
             // Log in the user
             Auth.auth().signIn(withEmail: email, password: password) { [self] (result, error) in
                 // Check for errors
                 if let error = error {
+                    loginButton.stopAnimation(animationStyle: .shake)
                     // There was an error creating the user
                     Utilities.showError(message: "Error signing in user: \(error.localizedDescription)", label: errorLabel)
-                }
-                else {
-                    // Transition to the home screen
-                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-                        sceneDelegate.showHomeScreen()
+                } else {
+                    // Transition to the home screen with a slide animation
+                    errorLabel.isHidden = true
+                    loginButton.stopAnimation(animationStyle: .normal, revertAfterDelay: 2) {
+                        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                            guard let windowScene = sceneDelegate.window?.windowScene else { return }
+                            let transition = CATransition()
+                            transition.duration = 0.5
+                            transition.type = CATransitionType.push
+                            transition.subtype = CATransitionSubtype.fromRight
+                            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+                            windowScene.windows.first?.layer.add(transition, forKey: kCATransition)
+                            sceneDelegate.showHomeScreen()
+                        }
                     }
                 }
             }
         }
     }
+    
 }

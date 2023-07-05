@@ -21,7 +21,7 @@ class Utilities {
     }
     
     static func showError(message: String, label: UILabel) {
-        label.text = message
-        label.alpha = 1
-    }
+            label.text = message
+            label.alpha = 1
+        }
 }
