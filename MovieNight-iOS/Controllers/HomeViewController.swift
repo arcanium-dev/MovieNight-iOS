@@ -113,7 +113,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
     func nextCardImage() {
             if let listOfMovies = moviesList {
                 cardIndex = (cardIndex + 1)

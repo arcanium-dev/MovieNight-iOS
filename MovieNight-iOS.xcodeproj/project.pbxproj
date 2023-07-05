@@ -33,11 +33,15 @@
 		8CA3C13C47E48D50417CD809 /* Pods_MovieNight_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF23DDD84405F0BFF9AA16 /* Pods_MovieNight_iOS.framework */; };
 		E7385E612A14E0F50048599B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7385E602A14E0F50048599B /* LoginViewController.swift */; };
 		E7385E632A14E1020048599B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7385E622A14E1020048599B /* SignUpViewController.swift */; };
-		E73FB0C42A177CAC005B3EE6 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73FB0C32A177CAC005B3EE6 /* String.extension.swift */; };
+		E73FB0C42A177CAC005B3EE6 /* Defaults.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73FB0C32A177CAC005B3EE6 /* Defaults.extension.swift */; };
 		E73FB0C62A178804005B3EE6 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = E73FB0C52A178804005B3EE6 /* Strings.strings */; };
 		E7D28CDE2A151FB9001033C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */; };
 		E7D28CE02A155D9E001033C5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D28CDF2A155D9E001033C5 /* Utilities.swift */; };
 		E7EE5E662A1582AA00608DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EE5E652A1582AA00608DE2 /* Images.xcassets */; };
+		E7F82E612A40E36F0006599D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7F82E602A40E36F0006599D /* Poppins-Medium.ttf */; };
+		E7F82E622A40E3820006599D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7A61DDC2A40E0B000B90040 /* Poppins-Bold.ttf */; };
+		E7F82E632A40E3840006599D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7A61DDA2A40E09B00B90040 /* Poppins-Bold.ttf */; };
+		E7F82E642A40E3860006599D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7A61DDB2A40E0A600B90040 /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,11 +75,15 @@
 		AB892657357DFF92DE10A9E2 /* Pods-MovieNight-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieNight-iOS.release.xcconfig"; path = "Target Support Files/Pods-MovieNight-iOS/Pods-MovieNight-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E7385E602A14E0F50048599B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7385E622A14E1020048599B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		E73FB0C32A177CAC005B3EE6 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
+		E73FB0C32A177CAC005B3EE6 /* Defaults.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.extension.swift; sourceTree = "<group>"; };
 		E73FB0C52A178804005B3EE6 /* Strings.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		E7A61DDA2A40E09B00B90040 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		E7A61DDB2A40E0A600B90040 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E7A61DDC2A40E0B000B90040 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7D28CDF2A155D9E001033C5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E7EE5E652A1582AA00608DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E7F82E602A40E36F0006599D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +140,10 @@
 				316AC1892A0FE4FB00677FCE /* Models */,
 				316AC18A2A0FE51300677FCE /* Views */,
 				316AC1882A0FE4EF00677FCE /* Controllers */,
+				E7A61DD92A40E04E00B90040 /* Fonts */,
 				316AC18C2A0FE52300677FCE /* Helpers */,
 				316AC1A72A0FE83C00677FCE /* Networking */,
 				316AC18E2A0FE53B00677FCE /* Resources */,
-				316AC18B2A0FE51900677FCE /* Extensions */,
-				316AC18D2A0FE53100677FCE /* Tests */,
 				316AC1742A0FE49F00677FCE /* AppDelegate.swift */,
 				316AC1762A0FE49F00677FCE /* SceneDelegate.swift */,
 				E7D28CDD2A151FB9001033C5 /* GoogleService-Info.plist */,
@@ -183,13 +190,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		316AC18B2A0FE51900677FCE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		316AC18C2A0FE52300677FCE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,16 +199,9 @@
 				316AC1A32A0FE81D00677FCE /* GenreSelectionHelper.swift */,
 				316AC1A52A0FE82A00677FCE /* SwipeManager.swift */,
 				E7D28CDF2A155D9E001033C5 /* Utilities.swift */,
-				E73FB0C32A177CAC005B3EE6 /* String.extension.swift */,
+				E73FB0C32A177CAC005B3EE6 /* Defaults.extension.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		316AC18D2A0FE53100677FCE /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		316AC18E2A0FE53B00677FCE /* Resources */ = {
@@ -225,6 +218,17 @@
 				316AC1A82A0FE84800677FCE /* MovieListAPI.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E7A61DD92A40E04E00B90040 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7F82E602A40E36F0006599D /* Poppins-Medium.ttf */,
+				E7A61DDC2A40E0B000B90040 /* Poppins-Bold.ttf */,
+				E7A61DDA2A40E09B00B90040 /* Poppins-Bold.ttf */,
+				E7A61DDB2A40E0A600B90040 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +294,13 @@
 				31F635ED2A1A83C000D40775 /* Auth.storyboard in Resources */,
 				316AC1812A0FE4A000677FCE /* LaunchScreen.storyboard in Resources */,
 				316AC17E2A0FE4A000677FCE /* Assets.xcassets in Resources */,
+				E7F82E642A40E3860006599D /* Poppins-Regular.ttf in Resources */,
 				E7D28CDE2A151FB9001033C5 /* GoogleService-Info.plist in Resources */,
 				E7EE5E662A1582AA00608DE2 /* Images.xcassets in Resources */,
+				E7F82E622A40E3820006599D /* Poppins-Bold.ttf in Resources */,
 				E73FB0C62A178804005B3EE6 /* Strings.strings in Resources */,
+				E7F82E632A40E3840006599D /* Poppins-Bold.ttf in Resources */,
+				E7F82E612A40E36F0006599D /* Poppins-Medium.ttf in Resources */,
 				316AC1902A0FE5AC00677FCE /* README.md in Resources */,
 				316AC17C2A0FE49F00677FCE /* Main.storyboard in Resources */,
 			);
@@ -363,7 +371,7 @@
 				316AC1B12A0FE9F200677FCE /* BrowseViewController.swift in Sources */,
 				316AC1752A0FE49F00677FCE /* AppDelegate.swift in Sources */,
 				316AC1772A0FE49F00677FCE /* SceneDelegate.swift in Sources */,
-				E73FB0C42A177CAC005B3EE6 /* String.extension.swift in Sources */,
+				E73FB0C42A177CAC005B3EE6 /* Defaults.extension.swift in Sources */,
 				316AC19E2A0FE7F800677FCE /* User.swift in Sources */,
 				E7385E612A14E0F50048599B /* LoginViewController.swift in Sources */,
 				316AC1A02A0FE7FF00677FCE /* Movie.swift in Sources */,
