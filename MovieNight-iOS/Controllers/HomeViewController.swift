@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     var movieIdsList: MovieIds?
     let movieCardArray = [#imageLiteral(resourceName: "Image 4"), #imageLiteral(resourceName: "Image 2"), #imageLiteral(resourceName: "Image 5"), #imageLiteral(resourceName: "Image 1"), #imageLiteral(resourceName: "Image 3"), #imageLiteral(resourceName: "doctorStrange"), #imageLiteral(resourceName: "Image")]
         var moviesList: [MovieDetails]?
+        //set initial batch number (top 250 movies divided into 5 batches of 50)
         var batchPage = 1
         
         override func viewDidLoad() {
@@ -61,16 +62,21 @@ class HomeViewController: UIViewController {
     }
     
     private func updateCardImages() {
+        //check movies list not null
             if let listOfMovies = moviesList {
+                //if index is larger than list of movies switch to next batch
                 if cardIndex > (listOfMovies.count - 1) {
+                    //currently max 5 batches so loop back to batch 1 after we exhaust all batches
                     if batchPage == 5 {
                         batchPage = 1
                     } else {
                         batchPage += 1
                     }
+                    //start from index 0 of new batch and replace the exhausted movies list with new movies list
                     cardIndex = 0
                     movieManager.fetchMovies(pageNo: batchPage)
                 }
+                //load 3 images at a time
                 let firstImage = listOfMovies[cardIndex]
                 let secondImage = listOfMovies[(cardIndex + 1) % (listOfMovies.count)]
                 let thirdImage = listOfMovies[(cardIndex + 2) % (listOfMovies.count)]
@@ -184,14 +190,12 @@ extension HomeViewController: MovieManagerDelegate {
     func didUpdateMovieList(_ movieManager: MovieManager, _ movieList: [MovieDetails]) {
         DispatchQueue.main.async {
             //Do functions here e.g get image and display
-            print(movieList[0].originalTitleText.text)
             self.moviesList = movieList
             self.updateCardImages()
         }
     }
     
     func didFailWithError(_ error: Error) {
-        print(error)
     }
     
     
